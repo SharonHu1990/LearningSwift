@@ -6,23 +6,23 @@ provides-nominal:
 provides-member:
 - ["C13WKWebViewTest11AppDelegate", ""]
 provides-dynamic-lookup:
-- "applicationWillTerminate"
-- "window"
-- "applicationDidEnterBackground"
 - "applicationWillEnterForeground"
-- "application"
 - "applicationDidBecomeActive"
+- "applicationWillTerminate"
+- "application"
 - "applicationWillResignActive"
+- "applicationDidEnterBackground"
+- "window"
 depends-top-level:
 - "UIResponder"
 - "UIWindow"
-- "UIApplicationDelegate"
+- "AppDelegate"
+- "UIApplication"
+- "AnyObject"
+- "NSObject"
 - "Bool"
 - !private "BooleanLiteralType"
-- "UIApplication"
-- "NSObject"
-- "AppDelegate"
-- "AnyObject"
+- "UIApplicationDelegate"
 depends-member:
 - ["PSs9AnyObject", "application"]
 - ["PSs9AnyObject", "applicationDidBecomeActive"]

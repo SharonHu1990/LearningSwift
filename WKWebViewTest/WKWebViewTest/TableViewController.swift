@@ -46,7 +46,14 @@ class TableViewController: UITableViewController {
         // Configure the cell...
         cell.textLabel?.text = sourceArr[indexPath.row];
         
+        
         return cell
+    }
+    
+    override func tableView(tableView: UITableView, didSelectRowAtIndexPath indexPath: NSIndexPath) {
+        
+        let typeValue = indexPath.row + 1
+        UserDefault.setObject(typeValue, forKey: "DispalyType")
     }
     
 

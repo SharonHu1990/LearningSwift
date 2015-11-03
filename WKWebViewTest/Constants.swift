@@ -22,6 +22,13 @@ let kScreenWidth = UIScreen.mainScreen().bounds.size.width
 */
 let kScreenHeight = UIScreen.mainScreen().bounds.size.height
 
+/**
+*  UserDefault
+*
+*  @return <#return value description#>
+*/
+let UserDefault = NSUserDefaults.standardUserDefaults()
+
 
 /**
 *   除了一些简单的属性直接用常量表达,更推荐用全局函数来定义替代宏
@@ -40,6 +47,9 @@ func kRGBA (r:CGFloat, g:CGFloat, b:CGFloat, a:CGFloat) ->UIColor {return UIColo
 
 //APP沙盒路径
 func kAppPath() -> String! {return NSHomeDirectory()}
+
+//
+func kBundlePath(fileName:String, fileType:String) ->String! {return NSBundle.mainBundle().pathForResource(fileName, ofType: fileType)}
 
 //Documents路径
 func kBundleDocumentPath() -> String! {

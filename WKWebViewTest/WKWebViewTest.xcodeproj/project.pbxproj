@@ -16,8 +16,8 @@
 		0A036AD31BE710F1004FACCA /* main.js in Resources */ = {isa = PBXBuildFile; fileRef = 0A036AD11BE710F1004FACCA /* main.js */; settings = {ASSET_TAGS = (); }; };
 		0A036AD91BE711BF004FACCA /* JSTestViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0A036AD81BE711BF004FACCA /* JSTestViewController.swift */; settings = {ASSET_TAGS = (); }; };
 		0A036ADD1BE71291004FACCA /* TableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0A036ADC1BE71291004FACCA /* TableViewController.swift */; settings = {ASSET_TAGS = (); }; };
-		0A036ADF1BE734DE004FACCA /* Defines.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0A036ADE1BE734DE004FACCA /* Defines.swift */; settings = {ASSET_TAGS = (); }; };
 		0A036AE11BE73506004FACCA /* Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0A036AE01BE73506004FACCA /* Constants.swift */; settings = {ASSET_TAGS = (); }; };
+		0A4A93F01BE85760009152BC /* ShowTypeService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0A4A93EF1BE85760009152BC /* ShowTypeService.swift */; settings = {ASSET_TAGS = (); }; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -33,8 +33,8 @@
 		0A036AD11BE710F1004FACCA /* main.js */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.javascript; path = main.js; sourceTree = "<group>"; };
 		0A036AD81BE711BF004FACCA /* JSTestViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = JSTestViewController.swift; sourceTree = "<group>"; };
 		0A036ADC1BE71291004FACCA /* TableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TableViewController.swift; sourceTree = "<group>"; };
-		0A036ADE1BE734DE004FACCA /* Defines.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Defines.swift; sourceTree = "<group>"; };
-		0A036AE01BE73506004FACCA /* Constants.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Constants.swift; sourceTree = "<group>"; };
+		0A036AE01BE73506004FACCA /* Constants.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = Constants.swift; path = ../Constants.swift; sourceTree = "<group>"; };
+		0A4A93EF1BE85760009152BC /* ShowTypeService.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ShowTypeService.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -51,7 +51,6 @@
 		0A036AB01BE6F4C3004FACCA = {
 			isa = PBXGroup;
 			children = (
-				0A036AE01BE73506004FACCA /* Constants.swift */,
 				0A036ABB1BE6F4C3004FACCA /* WKWebViewTest */,
 				0A036ABA1BE6F4C3004FACCA /* Products */,
 			);
@@ -68,7 +67,8 @@
 		0A036ABB1BE6F4C3004FACCA /* WKWebViewTest */ = {
 			isa = PBXGroup;
 			children = (
-				0A036ACF1BE710E0004FACCA /* Resource */,
+				0A036AE01BE73506004FACCA /* Constants.swift */,
+				0A036ACF1BE710E0004FACCA /* www */,
 				0A036AD81BE711BF004FACCA /* JSTestViewController.swift */,
 				0A036ABC1BE6F4C3004FACCA /* AppDelegate.swift */,
 				0A036ABE1BE6F4C3004FACCA /* ViewController.swift */,
@@ -78,18 +78,18 @@
 				0A036AC51BE6F4C3004FACCA /* LaunchScreen.storyboard */,
 				0A036AC81BE6F4C3004FACCA /* Info.plist */,
 				0A036ACE1BE6FB46004FACCA /* Notebook.playground */,
-				0A036ADE1BE734DE004FACCA /* Defines.swift */,
+				0A4A93EF1BE85760009152BC /* ShowTypeService.swift */,
 			);
 			path = WKWebViewTest;
 			sourceTree = "<group>";
 		};
-		0A036ACF1BE710E0004FACCA /* Resource */ = {
+		0A036ACF1BE710E0004FACCA /* www */ = {
 			isa = PBXGroup;
 			children = (
 				0A036AD01BE710F1004FACCA /* index.html */,
 				0A036AD11BE710F1004FACCA /* main.js */,
 			);
-			name = Resource;
+			name = www;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -167,7 +167,7 @@
 				0A036ABF1BE6F4C3004FACCA /* ViewController.swift in Sources */,
 				0A036ABD1BE6F4C3004FACCA /* AppDelegate.swift in Sources */,
 				0A036ADD1BE71291004FACCA /* TableViewController.swift in Sources */,
-				0A036ADF1BE734DE004FACCA /* Defines.swift in Sources */,
+				0A4A93F01BE85760009152BC /* ShowTypeService.swift in Sources */,
 				0A036AD91BE711BF004FACCA /* JSTestViewController.swift in Sources */,
 				0A036AE11BE73506004FACCA /* Constants.swift in Sources */,
 			);
@@ -281,6 +281,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				INFOPLIST_FILE = WKWebViewTest/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = HXY.WKWebViewTest;
 				PRODUCT_NAME = "$(TARGET_NAME)";
@@ -292,6 +293,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				INFOPLIST_FILE = WKWebViewTest/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = HXY.WKWebViewTest;
 				PRODUCT_NAME = "$(TARGET_NAME)";
@@ -317,6 +319,7 @@
 				0A036ACD1BE6F4C3004FACCA /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};

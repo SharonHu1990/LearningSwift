@@ -13,7 +13,40 @@
 //: 需要两个因素：1.一个WKWebView可以加载的带有一些JavaScript的网页；2.一个访问WKWebView网页的本地应用程序
 
 
-//这个网页
+//:这个网页
+//:网页一般是相当简单的。有两个文件，一个是"index.html",一个是main.js（包含在index.html的body标签的结尾）。
+
+
+//:main.js的内容如下：
+
+/*
+function callNativeApp () {
+    try {
+        webkit.messageHandlers.callbackHandler.postMessage("Hello from JavaScript");
+    } catch(err) {
+        console.log('The native context does not exist yet');
+    }
+}
+
+setTimeout(function () {
+    callNativeApp();
+    }, 5000);
+
+function redHeader() {
+    document.querySelector('h1').style.color = "red";
+}
+*/
+
+//:当这个脚本文件加载时，将等待5秒钟，然后执行"callNativeApp"方法。唯一需要注意的是，这里有一个"callbackHandler",它是脚本消息回调的名字，我们将在本地应用程序中定义它。
+//Also, I'm wrapping the callback to "webkit.messageHandlers....." in a try catch block to avoid the script falling over when it's running outside of a native app context.
+//
+//There is also a tiny function which will change the header in the HTML page to a red color when run, well use this later.
+//
+//You can load this web-page from a server or simply include it in your app. I'll be loading it from a local server to simulate a more realistic example.
+
+
+
+
 
 
 

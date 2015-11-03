@@ -108,12 +108,6 @@ SWIFT_CLASS("_TtC13WKWebViewTest11AppDelegate")
 - (nonnull instancetype)init OBJC_DESIGNATED_INITIALIZER;
 @end
 
-
-SWIFT_CLASS("_TtC13WKWebViewTest7Defines")
-@interface Defines : NSObject
-- (nonnull instancetype)init OBJC_DESIGNATED_INITIALIZER;
-@end
-
 @class UIView;
 @class WKWebView;
 @class NSBundle;
@@ -129,6 +123,12 @@ SWIFT_CLASS("_TtC13WKWebViewTest20JSTestViewController")
 - (nullable instancetype)initWithCoder:(NSCoder * __nonnull)aDecoder OBJC_DESIGNATED_INITIALIZER;
 @end
 
+
+SWIFT_CLASS("_TtC13WKWebViewTest15ShowTypeService")
+@interface ShowTypeService : NSObject
+- (nonnull instancetype)init OBJC_DESIGNATED_INITIALIZER;
+@end
+
 @class UITableView;
 @class NSIndexPath;
 @class UITableViewCell;
@@ -141,18 +141,22 @@ SWIFT_CLASS("_TtC13WKWebViewTest19TableViewController")
 - (NSInteger)numberOfSectionsInTableView:(UITableView * __nonnull)tableView;
 - (NSInteger)tableView:(UITableView * __nonnull)tableView numberOfRowsInSection:(NSInteger)section;
 - (UITableViewCell * __nonnull)tableView:(UITableView * __nonnull)tableView cellForRowAtIndexPath:(NSIndexPath * __nonnull)indexPath;
+- (void)tableView:(UITableView * __nonnull)tableView didSelectRowAtIndexPath:(NSIndexPath * __nonnull)indexPath;
 - (nonnull instancetype)initWithStyle:(UITableViewStyle)style OBJC_DESIGNATED_INITIALIZER;
 - (nonnull instancetype)initWithNibName:(NSString * __nullable)nibNameOrNil bundle:(NSBundle * __nullable)nibBundleOrNil OBJC_DESIGNATED_INITIALIZER;
 - (nullable instancetype)initWithCoder:(NSCoder * __nonnull)aDecoder OBJC_DESIGNATED_INITIALIZER;
 @end
 
+@class NSURL;
 
 SWIFT_CLASS("_TtC13WKWebViewTest14ViewController")
 @interface ViewController : UIViewController
 @property (nonatomic) IBOutlet UIView * __null_unspecified containerView;
-@property (nonatomic) NSInteger ShowType;
 @property (nonatomic) WKWebView * __nullable webView;
 - (void)loadView;
+
+/// <ul><li>将网页copy到NSTemporaryDirectory()下</li><li></li><li>@param String? <#String? description#></li><li></li><li>@return <#return value description#></li></ul>
+- (NSURL * __nullable)urlForBuggyWKWebView:(NSString * __nullable)filePath;
 - (void)viewDidLoad;
 - (void)didReceiveMemoryWarning;
 - (nonnull instancetype)initWithNibName:(NSString * __nullable)nibNameOrNil bundle:(NSBundle * __nullable)nibBundleOrNil OBJC_DESIGNATED_INITIALIZER;

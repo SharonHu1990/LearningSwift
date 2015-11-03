@@ -9,24 +9,29 @@ provides-dynamic-lookup:
 - "sourceArr"
 - "tableView"
 - "tableView"
+- "tableView"
 - "didReceiveMemoryWarning"
-- "viewDidLoad"
 - "numberOfSectionsInTableView"
+- "viewDidLoad"
 depends-top-level:
+- !private "+"
+- !private "UserDefault"
+- "NSIndexPath"
 - "UITableViewController"
-- "UITableViewCell"
-- "UITableView"
-- "Int"
+- "StringLiteralType"
 - "TableViewController"
 - "Array"
-- "NSIndexPath"
-- "StringLiteralType"
+- "UITableView"
+- "Int"
+- "UITableViewCell"
 depends-member:
+- !private ["PSs9AnyObject", "UserDefault"]
 - !private ["PSs9AnyObject", "dequeueReusableCellWithIdentifier"]
 - ["PSs9AnyObject", "didReceiveMemoryWarning"]
 - ["PSs9AnyObject", "init"]
 - ["PSs9AnyObject", "numberOfSectionsInTableView"]
 - !private ["PSs9AnyObject", "row"]
+- !private ["PSs9AnyObject", "setObject"]
 - ["PSs9AnyObject", "sourceArr"]
 - ["PSs9AnyObject", "tableView"]
 - !private ["PSs9AnyObject", "text"]
@@ -54,11 +59,13 @@ depends-member:
 - !private ["PSs21BitwiseOperationsType", "IntegerLiteralType"]
 - !private ["PSs11CVarArgType", "Distance"]
 - !private ["PSs11CVarArgType", "IntegerLiteralType"]
+- !private ["PSs11CVarArgType", "UserDefault"]
 - !private ["PSs11CVarArgType", "dequeueReusableCellWithIdentifier"]
 - ["PSs11CVarArgType", "didReceiveMemoryWarning"]
 - ["PSs11CVarArgType", "init"]
 - ["PSs11CVarArgType", "numberOfSectionsInTableView"]
 - !private ["PSs11CVarArgType", "row"]
+- !private ["PSs11CVarArgType", "setObject"]
 - ["PSs11CVarArgType", "sourceArr"]
 - ["PSs11CVarArgType", "tableView"]
 - !private ["PSs11CVarArgType", "text"]
@@ -86,12 +93,14 @@ depends-member:
 - !private ["PSs23CustomStringConvertible", "Index"]
 - !private ["PSs23CustomStringConvertible", "IntegerLiteralType"]
 - !private ["PSs23CustomStringConvertible", "SubSequence"]
+- !private ["PSs23CustomStringConvertible", "UserDefault"]
 - !private ["PSs23CustomStringConvertible", "count"]
 - !private ["PSs23CustomStringConvertible", "dequeueReusableCellWithIdentifier"]
 - ["PSs23CustomStringConvertible", "didReceiveMemoryWarning"]
 - ["PSs23CustomStringConvertible", "init"]
 - ["PSs23CustomStringConvertible", "numberOfSectionsInTableView"]
 - !private ["PSs23CustomStringConvertible", "row"]
+- !private ["PSs23CustomStringConvertible", "setObject"]
 - ["PSs23CustomStringConvertible", "sourceArr"]
 - !private ["PSs23CustomStringConvertible", "subscript"]
 - ["PSs23CustomStringConvertible", "tableView"]
@@ -101,11 +110,13 @@ depends-member:
 - ["PSs23CustomStringConvertible", ""]
 - !private ["PSs9Equatable", "Distance"]
 - !private ["PSs9Equatable", "IntegerLiteralType"]
+- !private ["PSs9Equatable", "UserDefault"]
 - !private ["PSs9Equatable", "dequeueReusableCellWithIdentifier"]
 - ["PSs9Equatable", "didReceiveMemoryWarning"]
 - ["PSs9Equatable", "init"]
 - ["PSs9Equatable", "numberOfSectionsInTableView"]
 - !private ["PSs9Equatable", "row"]
+- !private ["PSs9Equatable", "setObject"]
 - ["PSs9Equatable", "sourceArr"]
 - ["PSs9Equatable", "tableView"]
 - !private ["PSs9Equatable", "text"]
@@ -117,11 +128,13 @@ depends-member:
 - !private ["PSs13GeneratorType", "Element"]
 - !private ["PSs8Hashable", "Distance"]
 - !private ["PSs8Hashable", "IntegerLiteralType"]
+- !private ["PSs8Hashable", "UserDefault"]
 - !private ["PSs8Hashable", "dequeueReusableCellWithIdentifier"]
 - ["PSs8Hashable", "didReceiveMemoryWarning"]
 - ["PSs8Hashable", "init"]
 - ["PSs8Hashable", "numberOfSectionsInTableView"]
 - !private ["PSs8Hashable", "row"]
+- !private ["PSs8Hashable", "setObject"]
 - ["PSs8Hashable", "sourceArr"]
 - ["PSs8Hashable", "tableView"]
 - !private ["PSs8Hashable", "text"]
@@ -138,6 +151,7 @@ depends-member:
 - !private ["VSs17IndexingGenerator", "Element"]
 - !private ["Si", "Distance"]
 - !private ["Si", "IntegerLiteralType"]
+- !private ["Si", "deinit"]
 - !private ["PSs21IntegerArithmeticType", "Distance"]
 - !private ["PSs21IntegerArithmeticType", "IntegerLiteralType"]
 - !private ["PSs25IntegerLiteralConvertible", "Distance"]
@@ -164,6 +178,7 @@ depends-member:
 - !private ["PSs16MutableSliceable", "SubSequence"]
 - !private ["PSs16MutableSliceable", "count"]
 - !private ["PSs16MutableSliceable", "subscript"]
+- !private ["PSo8NSCoding", "UserDefault"]
 - !private ["PSo8NSCoding", "dequeueReusableCellWithIdentifier"]
 - ["PSo8NSCoding", "didReceiveMemoryWarning"]
 - ["PSo8NSCoding", "init"]
@@ -176,6 +191,7 @@ depends-member:
 - ["PSo8NSCoding", "viewDidLoad"]
 - ["PSo8NSCoding", ""]
 - !private ["PSo9NSCopying", "row"]
+- !private ["PSo26NSExtensionRequestHandling", "UserDefault"]
 - ["PSo26NSExtensionRequestHandling", "didReceiveMemoryWarning"]
 - ["PSo26NSExtensionRequestHandling", "init"]
 - ["PSo26NSExtensionRequestHandling", "numberOfSectionsInTableView"]
@@ -188,21 +204,25 @@ depends-member:
 - ["CSo8NSObject", "NSIndexPath"]
 - ["CSo8NSObject", "UITableView"]
 - ["CSo8NSObject", "UITableViewCell"]
+- !private ["CSo8NSObject", "UserDefault"]
 - !private ["CSo8NSObject", "dequeueReusableCellWithIdentifier"]
 - ["CSo8NSObject", "didReceiveMemoryWarning"]
 - ["CSo8NSObject", "init"]
 - ["CSo8NSObject", "numberOfSectionsInTableView"]
 - !private ["CSo8NSObject", "row"]
+- !private ["CSo8NSObject", "setObject"]
 - ["CSo8NSObject", "sourceArr"]
 - ["CSo8NSObject", "tableView"]
 - !private ["CSo8NSObject", "text"]
 - !private ["CSo8NSObject", "textLabel"]
 - ["CSo8NSObject", "viewDidLoad"]
+- !private ["PSo16NSObjectProtocol", "UserDefault"]
 - !private ["PSo16NSObjectProtocol", "dequeueReusableCellWithIdentifier"]
 - ["PSo16NSObjectProtocol", "didReceiveMemoryWarning"]
 - ["PSo16NSObjectProtocol", "init"]
 - ["PSo16NSObjectProtocol", "numberOfSectionsInTableView"]
 - !private ["PSo16NSObjectProtocol", "row"]
+- !private ["PSo16NSObjectProtocol", "setObject"]
 - ["PSo16NSObjectProtocol", "sourceArr"]
 - ["PSo16NSObjectProtocol", "tableView"]
 - !private ["PSo16NSObjectProtocol", "text"]
@@ -210,6 +230,7 @@ depends-member:
 - ["PSo16NSObjectProtocol", "viewDidLoad"]
 - ["PSo16NSObjectProtocol", ""]
 - !private ["PSo14NSSecureCoding", "row"]
+- !private ["CSo14NSUserDefaults", "setObject"]
 - !private ["PSs21RandomAccessIndexType", "Distance"]
 - !private ["PSs21RandomAccessIndexType", "IntegerLiteralType"]
 - ["PSs30RangeReplaceableCollectionType", "Element"]
@@ -239,6 +260,7 @@ depends-member:
 - ["C13WKWebViewTest19TableViewController", "NSIndexPath"]
 - ["C13WKWebViewTest19TableViewController", "UITableView"]
 - ["C13WKWebViewTest19TableViewController", "UITableViewCell"]
+- !private ["C13WKWebViewTest19TableViewController", "UserDefault"]
 - ["C13WKWebViewTest19TableViewController", "deinit"]
 - ["C13WKWebViewTest19TableViewController", "didReceiveMemoryWarning"]
 - ["C13WKWebViewTest19TableViewController", "init"]
@@ -252,6 +274,7 @@ depends-member:
 - !private ["PSo12UIAppearance", "dequeueReusableCellWithIdentifier"]
 - !private ["PSo12UIAppearance", "text"]
 - !private ["PSo12UIAppearance", "textLabel"]
+- !private ["PSo21UIAppearanceContainer", "UserDefault"]
 - !private ["PSo21UIAppearanceContainer", "dequeueReusableCellWithIdentifier"]
 - ["PSo21UIAppearanceContainer", "didReceiveMemoryWarning"]
 - ["PSo21UIAppearanceContainer", "init"]
@@ -262,6 +285,7 @@ depends-member:
 - !private ["PSo21UIAppearanceContainer", "textLabel"]
 - ["PSo21UIAppearanceContainer", "viewDidLoad"]
 - ["PSo21UIAppearanceContainer", ""]
+- !private ["PSo18UIContentContainer", "UserDefault"]
 - ["PSo18UIContentContainer", "didReceiveMemoryWarning"]
 - ["PSo18UIContentContainer", "init"]
 - ["PSo18UIContentContainer", "numberOfSectionsInTableView"]
@@ -281,6 +305,7 @@ depends-member:
 - ["CSo11UIResponder", "NSIndexPath"]
 - ["CSo11UIResponder", "UITableView"]
 - ["CSo11UIResponder", "UITableViewCell"]
+- !private ["CSo11UIResponder", "UserDefault"]
 - !private ["CSo11UIResponder", "dequeueReusableCellWithIdentifier"]
 - ["CSo11UIResponder", "didReceiveMemoryWarning"]
 - ["CSo11UIResponder", "init"]
@@ -291,6 +316,7 @@ depends-member:
 - !private ["CSo11UIResponder", "textLabel"]
 - ["CSo11UIResponder", "viewDidLoad"]
 - !private ["CSo12UIScrollView", "dequeueReusableCellWithIdentifier"]
+- !private ["PSo20UIScrollViewDelegate", "UserDefault"]
 - ["PSo20UIScrollViewDelegate", "didReceiveMemoryWarning"]
 - ["PSo20UIScrollViewDelegate", "init"]
 - ["PSo20UIScrollViewDelegate", "numberOfSectionsInTableView"]
@@ -298,6 +324,7 @@ depends-member:
 - ["PSo20UIScrollViewDelegate", "tableView"]
 - ["PSo20UIScrollViewDelegate", "viewDidLoad"]
 - ["PSo20UIScrollViewDelegate", ""]
+- !private ["PSo16UIStateRestoring", "UserDefault"]
 - ["PSo16UIStateRestoring", "didReceiveMemoryWarning"]
 - ["PSo16UIStateRestoring", "init"]
 - ["PSo16UIStateRestoring", "numberOfSectionsInTableView"]
@@ -311,6 +338,7 @@ depends-member:
 - ["CSo21UITableViewController", "NSIndexPath"]
 - ["CSo21UITableViewController", "UITableView"]
 - ["CSo21UITableViewController", "UITableViewCell"]
+- !private ["CSo21UITableViewController", "UserDefault"]
 - ["CSo21UITableViewController", "didReceiveMemoryWarning"]
 - ["CSo21UITableViewController", "init"]
 - ["CSo21UITableViewController", "numberOfSectionsInTableView"]
@@ -318,6 +346,7 @@ depends-member:
 - ["CSo21UITableViewController", "tableView"]
 - ["CSo21UITableViewController", "viewDidLoad"]
 - ["CSo21UITableViewController", ""]
+- !private ["PSo21UITableViewDataSource", "UserDefault"]
 - ["PSo21UITableViewDataSource", "didReceiveMemoryWarning"]
 - ["PSo21UITableViewDataSource", "init"]
 - ["PSo21UITableViewDataSource", "numberOfSectionsInTableView"]
@@ -325,6 +354,7 @@ depends-member:
 - ["PSo21UITableViewDataSource", "tableView"]
 - ["PSo21UITableViewDataSource", "viewDidLoad"]
 - ["PSo21UITableViewDataSource", ""]
+- !private ["PSo19UITableViewDelegate", "UserDefault"]
 - ["PSo19UITableViewDelegate", "didReceiveMemoryWarning"]
 - ["PSo19UITableViewDelegate", "init"]
 - ["PSo19UITableViewDelegate", "numberOfSectionsInTableView"]
@@ -332,6 +362,7 @@ depends-member:
 - ["PSo19UITableViewDelegate", "tableView"]
 - ["PSo19UITableViewDelegate", "viewDidLoad"]
 - ["PSo19UITableViewDelegate", ""]
+- !private ["PSo18UITraitEnvironment", "UserDefault"]
 - !private ["PSo18UITraitEnvironment", "dequeueReusableCellWithIdentifier"]
 - ["PSo18UITraitEnvironment", "didReceiveMemoryWarning"]
 - ["PSo18UITraitEnvironment", "init"]
@@ -349,6 +380,7 @@ depends-member:
 - ["CSo16UIViewController", "NSIndexPath"]
 - ["CSo16UIViewController", "UITableView"]
 - ["CSo16UIViewController", "UITableViewCell"]
+- !private ["CSo16UIViewController", "UserDefault"]
 - ["CSo16UIViewController", "didReceiveMemoryWarning"]
 - ["CSo16UIViewController", "init"]
 - ["CSo16UIViewController", "numberOfSectionsInTableView"]
@@ -433,6 +465,7 @@ depends-nominal:
 - "CSo8NSObject"
 - "PSo16NSObjectProtocol"
 - !private "PSo14NSSecureCoding"
+- !private "CSo14NSUserDefaults"
 - !private "PSs21RandomAccessIndexType"
 - "PSs30RangeReplaceableCollectionType"
 - "PSs12SequenceType"
@@ -483,4 +516,4 @@ depends-external:
 - "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/iphonesimulator/x86_64/CoreGraphics.swiftmodule"
 - "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/iphonesimulator/x86_64/CoreImage.swiftmodule"
 - "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/iphonesimulator/x86_64/WebKit.swiftmodule"
-interface-hash: "8721d33036405d294bb403db615dfa48"
+interface-hash: "0e58fc136807f01c64edb0c86e9e1bb4"

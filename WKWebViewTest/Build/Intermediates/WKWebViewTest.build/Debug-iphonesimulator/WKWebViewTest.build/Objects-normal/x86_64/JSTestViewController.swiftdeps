@@ -7,13 +7,13 @@ provides-member:
 - ["C13WKWebViewTest20JSTestViewController", ""]
 provides-dynamic-lookup:
 - "containerView"
-- "didReceiveMemoryWarning"
-- "viewDidLoad"
 - "webView"
+- "viewDidLoad"
+- "didReceiveMemoryWarning"
 depends-top-level:
-- "UIView"
 - "JSTestViewController"
 - "UIViewController"
+- "UIView"
 - "WKWebView"
 depends-member:
 - ["PSs9AnyObject", "containerView"]
