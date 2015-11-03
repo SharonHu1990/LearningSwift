@@ -1,0 +1,10 @@
+version: "Apple Swift version 2.0 (swiftlang-700.0.59 clang-700.0.72)"
+options: "913eb781383635881023c36bfef4561d"
+build_time: [499761001, 2288000]
+inputs: 
+	"/Users/huxiaoyang/Desktop/LearningSwift/WKWebViewTest/WKWebViewTest/ViewController.swift": [499760798, 0]
+	"/Users/huxiaoyang/Desktop/LearningSwift/WKWebViewTest/WKWebViewTest/JSTestViewController.swift": [499750738, 0]
+	"/Users/huxiaoyang/Desktop/LearningSwift/WKWebViewTest/WKWebViewTest/Defines.swift": [499759582, 0]
+	"/Users/huxiaoyang/Desktop/LearningSwift/WKWebViewTest/WKWebViewTest/TableViewController.swift": [499761000, 0]
+	"/Users/huxiaoyang/Desktop/LearningSwift/WKWebViewTest/Constants.swift": [499760798, 0]
+	"/Users/huxiaoyang/Desktop/LearningSwift/WKWebViewTest/WKWebViewTest/AppDelegate.swift": [499743171, 0]

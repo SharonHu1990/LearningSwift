@@ -1,0 +1,6 @@
+version: "Apple Swift version 2.0 (swiftlang-700.0.59 clang-700.0.72)"
+options: "b6eea9e62f02abf04d5387332d10ad05"
+build_time: [498710595, 390100000]
+inputs: 
+	"/Users/huxiaoyang/Desktop/LearningSwift/LearnBasicTypes/LearnBasicTypes/ViewController.swift": [498710590, 0]
+	"/Users/huxiaoyang/Desktop/LearningSwift/LearnBasicTypes/LearnBasicTypes/AppDelegate.swift": [498710590, 0]
