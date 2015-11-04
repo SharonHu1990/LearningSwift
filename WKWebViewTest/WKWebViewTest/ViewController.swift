@@ -73,30 +73,27 @@ class ViewController: UIViewController {
             self.webView!.loadRequest(req)
 
         }else{
+        
+            let contentController = WKUserContentController()
+            let userScript = WKUserScript(
+                source: "redHeader",
+                injectionTime: WKUserScriptInjectionTime.AtDocumentEnd,
+                forMainFrameOnly: true
+            )
+            contentController.addUserScript(userScript)
+            
+            let configure = WKWebViewConfiguration()
+            configure.userContentController = contentController
+            self.webView = WKWebView(frame: self.containerView.bounds, configuration: configure)
+            self.view = self.webView
+
+//            加载本地页面
             let filePath = kBundlePath("index", fileType: "html")
-            let filePath2 = kFilePath("index", fileType: "html")
             print("bundle:\(filePath)")
-            print("home:\(filePath2)")
-//            let url = urlForBuggyWKWebView(filePath) //
-//            let request = NSURLRequest(URL: url!)
-//            
-//            
-//            let contentController = WKUserContentController()
-//            let userScript = WKUserScript(
-//                source: "redHeader",
-//                injectionTime: WKUserScriptInjectionTime.AtDocumentEnd,
-//                forMainFrameOnly: true
-//            )
-//            contentController.addUserScript(userScript)
-//            
-//            let configure = WKWebViewConfiguration()
-//            configure.userContentController = contentController
-//            self.webView = WKWebView(frame: self.containerView.bounds, configuration: configure)
-//            self.view = self.webView
-//            self.webView?.loadRequest(request)
-            //加载本地页面
-//            self.webView!.loadRequest(NSURLRequest(URL: NSURL.fileURLWithPath(NSBundle.mainBundle().pathForResource("index", ofType: "html")!)))
-            self.webView!.loadRequest(NSURLRequest(URL: NSURL.fileURLWithPath(filePath)))
+            let url = urlForBuggyWKWebView(filePath)
+            let request = NSURLRequest(URL: url!)
+            self.webView ?.loadRequest(request)
+            
         }
     }
     //注意！！！iOS9引入了新特性App Transport Security (ATS),新特性要求App内访问的网络必须使用HTTPS协议.如果出现网页无法显示的情况，需要修改项目的info.plist文件
