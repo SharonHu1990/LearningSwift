@@ -6,33 +6,36 @@ provides-nominal:
 provides-member:
 - ["C13WKWebViewTest14ViewController", ""]
 provides-dynamic-lookup:
-- "containerView"
-- "viewDidLoad"
-- "loadView"
 - "didReceiveMemoryWarning"
-- "urlForBuggyWKWebView"
+- "containerView"
+- "loadView"
+- "viewDidLoad"
 - "webView"
+- "urlForBuggyWKWebView"
+- "userContentController"
 depends-top-level:
+- "WKScriptMessage"
+- !private "NSTemporaryDirectory"
+- !private "WKWebViewConfiguration"
 - "NSURL"
 - !private "BooleanLiteralType"
-- "UIView"
-- !private "NSTemporaryDirectory"
-- !private "print"
-- !private "!"
-- !private "WKUserContentController"
-- !private "NSURLRequest"
-- "UIViewController"
-- !private "WKWebViewConfiguration"
-- !private "StringLiteralType"
-- "WKWebView"
-- "ViewController"
-- "String"
-- !private "WKUserScriptInjectionTime"
-- !private "NSFileManager"
 - !private "UserDefault"
-- !private "kBundlePath"
-- !private "=="
+- "WKUserContentController"
+- !private "NSURLRequest"
+- !private "!"
+- !private "print"
+- !private "WKUserScriptInjectionTime"
+- "String"
+- "WKScriptMessageHandler"
+- "UIViewController"
+- !private "StringLiteralType"
+- "ViewController"
 - !private "WKUserScript"
+- !private "kBundlePath"
+- !private "NSFileManager"
+- "WKWebView"
+- "UIView"
+- !private "=="
 depends-member:
 - !private ["PSs9AnyObject", "NSFileManager"]
 - !private ["PSs9AnyObject", "NSTemporaryDirectory"]
@@ -45,7 +48,9 @@ depends-member:
 - !private ["PSs9AnyObject", "WKUserScriptInjectionTime"]
 - !private ["PSs9AnyObject", "WKWebView"]
 - !private ["PSs9AnyObject", "WKWebViewConfiguration"]
+- !private ["PSs9AnyObject", "addScriptMessageHandler"]
 - !private ["PSs9AnyObject", "addUserScript"]
+- !private ["PSs9AnyObject", "body"]
 - !private ["PSs9AnyObject", "bounds"]
 - !private ["PSs9AnyObject", "checkResourceIsReachableAndReturnError"]
 - ["PSs9AnyObject", "containerView"]
@@ -60,10 +65,11 @@ depends-member:
 - !private ["PSs9AnyObject", "lastPathComponent"]
 - !private ["PSs9AnyObject", "loadRequest"]
 - ["PSs9AnyObject", "loadView"]
+- !private ["PSs9AnyObject", "name"]
 - !private ["PSs9AnyObject", "objectForKey"]
 - !private ["PSs9AnyObject", "print"]
 - ["PSs9AnyObject", "urlForBuggyWKWebView"]
-- !private ["PSs9AnyObject", "userContentController"]
+- ["PSs9AnyObject", "userContentController"]
 - !private ["PSs9AnyObject", "view"]
 - ["PSs9AnyObject", "viewDidLoad"]
 - ["PSs9AnyObject", "webView"]
@@ -83,7 +89,9 @@ depends-member:
 - !private ["PSs11CVarArgType", "WKUserScriptInjectionTime"]
 - !private ["PSs11CVarArgType", "WKWebView"]
 - !private ["PSs11CVarArgType", "WKWebViewConfiguration"]
+- !private ["PSs11CVarArgType", "addScriptMessageHandler"]
 - !private ["PSs11CVarArgType", "addUserScript"]
+- !private ["PSs11CVarArgType", "body"]
 - !private ["PSs11CVarArgType", "bounds"]
 - !private ["PSs11CVarArgType", "checkResourceIsReachableAndReturnError"]
 - ["PSs11CVarArgType", "containerView"]
@@ -97,10 +105,11 @@ depends-member:
 - !private ["PSs11CVarArgType", "lastPathComponent"]
 - !private ["PSs11CVarArgType", "loadRequest"]
 - ["PSs11CVarArgType", "loadView"]
+- !private ["PSs11CVarArgType", "name"]
 - !private ["PSs11CVarArgType", "objectForKey"]
 - !private ["PSs11CVarArgType", "print"]
 - ["PSs11CVarArgType", "urlForBuggyWKWebView"]
-- !private ["PSs11CVarArgType", "userContentController"]
+- ["PSs11CVarArgType", "userContentController"]
 - !private ["PSs11CVarArgType", "view"]
 - ["PSs11CVarArgType", "viewDidLoad"]
 - ["PSs11CVarArgType", "webView"]
@@ -120,7 +129,9 @@ depends-member:
 - !private ["PSs23CustomStringConvertible", "WKWebView"]
 - !private ["PSs23CustomStringConvertible", "WKWebViewConfiguration"]
 - !private ["PSs23CustomStringConvertible", "_getBuiltinLogicValue"]
+- !private ["PSs23CustomStringConvertible", "addScriptMessageHandler"]
 - !private ["PSs23CustomStringConvertible", "addUserScript"]
+- !private ["PSs23CustomStringConvertible", "body"]
 - !private ["PSs23CustomStringConvertible", "bounds"]
 - !private ["PSs23CustomStringConvertible", "checkResourceIsReachableAndReturnError"]
 - ["PSs23CustomStringConvertible", "containerView"]
@@ -134,10 +145,11 @@ depends-member:
 - !private ["PSs23CustomStringConvertible", "lastPathComponent"]
 - !private ["PSs23CustomStringConvertible", "loadRequest"]
 - ["PSs23CustomStringConvertible", "loadView"]
+- !private ["PSs23CustomStringConvertible", "name"]
 - !private ["PSs23CustomStringConvertible", "objectForKey"]
 - !private ["PSs23CustomStringConvertible", "print"]
 - ["PSs23CustomStringConvertible", "urlForBuggyWKWebView"]
-- !private ["PSs23CustomStringConvertible", "userContentController"]
+- ["PSs23CustomStringConvertible", "userContentController"]
 - !private ["PSs23CustomStringConvertible", "view"]
 - ["PSs23CustomStringConvertible", "viewDidLoad"]
 - ["PSs23CustomStringConvertible", "webView"]
@@ -156,7 +168,9 @@ depends-member:
 - !private ["PSs9Equatable", "WKWebView"]
 - !private ["PSs9Equatable", "WKWebViewConfiguration"]
 - !private ["PSs9Equatable", "_getBuiltinLogicValue"]
+- !private ["PSs9Equatable", "addScriptMessageHandler"]
 - !private ["PSs9Equatable", "addUserScript"]
+- !private ["PSs9Equatable", "body"]
 - !private ["PSs9Equatable", "bounds"]
 - !private ["PSs9Equatable", "checkResourceIsReachableAndReturnError"]
 - ["PSs9Equatable", "containerView"]
@@ -170,10 +184,11 @@ depends-member:
 - !private ["PSs9Equatable", "lastPathComponent"]
 - !private ["PSs9Equatable", "loadRequest"]
 - ["PSs9Equatable", "loadView"]
+- !private ["PSs9Equatable", "name"]
 - !private ["PSs9Equatable", "objectForKey"]
 - !private ["PSs9Equatable", "print"]
 - ["PSs9Equatable", "urlForBuggyWKWebView"]
-- !private ["PSs9Equatable", "userContentController"]
+- ["PSs9Equatable", "userContentController"]
 - !private ["PSs9Equatable", "view"]
 - ["PSs9Equatable", "viewDidLoad"]
 - ["PSs9Equatable", "webView"]
@@ -193,7 +208,9 @@ depends-member:
 - !private ["PSs8Hashable", "WKWebView"]
 - !private ["PSs8Hashable", "WKWebViewConfiguration"]
 - !private ["PSs8Hashable", "_getBuiltinLogicValue"]
+- !private ["PSs8Hashable", "addScriptMessageHandler"]
 - !private ["PSs8Hashable", "addUserScript"]
+- !private ["PSs8Hashable", "body"]
 - !private ["PSs8Hashable", "bounds"]
 - !private ["PSs8Hashable", "checkResourceIsReachableAndReturnError"]
 - ["PSs8Hashable", "containerView"]
@@ -207,10 +224,11 @@ depends-member:
 - !private ["PSs8Hashable", "lastPathComponent"]
 - !private ["PSs8Hashable", "loadRequest"]
 - ["PSs8Hashable", "loadView"]
+- !private ["PSs8Hashable", "name"]
 - !private ["PSs8Hashable", "objectForKey"]
 - !private ["PSs8Hashable", "print"]
 - ["PSs8Hashable", "urlForBuggyWKWebView"]
-- !private ["PSs8Hashable", "userContentController"]
+- ["PSs8Hashable", "userContentController"]
 - !private ["PSs8Hashable", "view"]
 - ["PSs8Hashable", "viewDidLoad"]
 - ["PSs8Hashable", "webView"]
@@ -244,6 +262,7 @@ depends-member:
 - ["PSo8NSCoding", "loadView"]
 - !private ["PSo8NSCoding", "print"]
 - ["PSo8NSCoding", "urlForBuggyWKWebView"]
+- ["PSo8NSCoding", "userContentController"]
 - !private ["PSo8NSCoding", "view"]
 - ["PSo8NSCoding", "viewDidLoad"]
 - ["PSo8NSCoding", "webView"]
@@ -271,6 +290,7 @@ depends-member:
 - ["PSo26NSExtensionRequestHandling", "loadView"]
 - !private ["PSo26NSExtensionRequestHandling", "print"]
 - ["PSo26NSExtensionRequestHandling", "urlForBuggyWKWebView"]
+- ["PSo26NSExtensionRequestHandling", "userContentController"]
 - !private ["PSo26NSExtensionRequestHandling", "view"]
 - ["PSo26NSExtensionRequestHandling", "viewDidLoad"]
 - ["PSo26NSExtensionRequestHandling", "webView"]
@@ -287,12 +307,15 @@ depends-member:
 - ["CSo8NSObject", "UIView"]
 - !private ["CSo8NSObject", "URLByAppendingPathComponent"]
 - !private ["CSo8NSObject", "UserDefault"]
-- !private ["CSo8NSObject", "WKUserContentController"]
+- ["CSo8NSObject", "WKScriptMessage"]
+- ["CSo8NSObject", "WKUserContentController"]
 - !private ["CSo8NSObject", "WKUserScript"]
 - !private ["CSo8NSObject", "WKUserScriptInjectionTime"]
 - ["CSo8NSObject", "WKWebView"]
 - !private ["CSo8NSObject", "WKWebViewConfiguration"]
+- !private ["CSo8NSObject", "addScriptMessageHandler"]
 - !private ["CSo8NSObject", "addUserScript"]
+- !private ["CSo8NSObject", "body"]
 - !private ["CSo8NSObject", "bounds"]
 - !private ["CSo8NSObject", "checkResourceIsReachableAndReturnError"]
 - ["CSo8NSObject", "containerView"]
@@ -306,10 +329,11 @@ depends-member:
 - !private ["CSo8NSObject", "lastPathComponent"]
 - !private ["CSo8NSObject", "loadRequest"]
 - ["CSo8NSObject", "loadView"]
+- !private ["CSo8NSObject", "name"]
 - !private ["CSo8NSObject", "objectForKey"]
 - !private ["CSo8NSObject", "print"]
 - ["CSo8NSObject", "urlForBuggyWKWebView"]
-- !private ["CSo8NSObject", "userContentController"]
+- ["CSo8NSObject", "userContentController"]
 - !private ["CSo8NSObject", "view"]
 - ["CSo8NSObject", "viewDidLoad"]
 - ["CSo8NSObject", "webView"]
@@ -324,7 +348,9 @@ depends-member:
 - !private ["PSo16NSObjectProtocol", "WKUserScriptInjectionTime"]
 - !private ["PSo16NSObjectProtocol", "WKWebView"]
 - !private ["PSo16NSObjectProtocol", "WKWebViewConfiguration"]
+- !private ["PSo16NSObjectProtocol", "addScriptMessageHandler"]
 - !private ["PSo16NSObjectProtocol", "addUserScript"]
+- !private ["PSo16NSObjectProtocol", "body"]
 - !private ["PSo16NSObjectProtocol", "bounds"]
 - !private ["PSo16NSObjectProtocol", "checkResourceIsReachableAndReturnError"]
 - ["PSo16NSObjectProtocol", "containerView"]
@@ -338,10 +364,11 @@ depends-member:
 - !private ["PSo16NSObjectProtocol", "lastPathComponent"]
 - !private ["PSo16NSObjectProtocol", "loadRequest"]
 - ["PSo16NSObjectProtocol", "loadView"]
+- !private ["PSo16NSObjectProtocol", "name"]
 - !private ["PSo16NSObjectProtocol", "objectForKey"]
 - !private ["PSo16NSObjectProtocol", "print"]
 - ["PSo16NSObjectProtocol", "urlForBuggyWKWebView"]
-- !private ["PSo16NSObjectProtocol", "userContentController"]
+- ["PSo16NSObjectProtocol", "userContentController"]
 - !private ["PSo16NSObjectProtocol", "view"]
 - ["PSo16NSObjectProtocol", "viewDidLoad"]
 - ["PSo16NSObjectProtocol", "webView"]
@@ -392,6 +419,7 @@ depends-member:
 - ["PSo21UIAppearanceContainer", "loadView"]
 - !private ["PSo21UIAppearanceContainer", "print"]
 - ["PSo21UIAppearanceContainer", "urlForBuggyWKWebView"]
+- ["PSo21UIAppearanceContainer", "userContentController"]
 - !private ["PSo21UIAppearanceContainer", "view"]
 - ["PSo21UIAppearanceContainer", "viewDidLoad"]
 - ["PSo21UIAppearanceContainer", "webView"]
@@ -413,6 +441,7 @@ depends-member:
 - ["PSo18UIContentContainer", "loadView"]
 - !private ["PSo18UIContentContainer", "print"]
 - ["PSo18UIContentContainer", "urlForBuggyWKWebView"]
+- ["PSo18UIContentContainer", "userContentController"]
 - !private ["PSo18UIContentContainer", "view"]
 - ["PSo18UIContentContainer", "viewDidLoad"]
 - ["PSo18UIContentContainer", "webView"]
@@ -430,7 +459,8 @@ depends-member:
 - ["CSo11UIResponder", "String"]
 - ["CSo11UIResponder", "UIView"]
 - !private ["CSo11UIResponder", "UserDefault"]
-- !private ["CSo11UIResponder", "WKUserContentController"]
+- ["CSo11UIResponder", "WKScriptMessage"]
+- ["CSo11UIResponder", "WKUserContentController"]
 - !private ["CSo11UIResponder", "WKUserScript"]
 - !private ["CSo11UIResponder", "WKUserScriptInjectionTime"]
 - ["CSo11UIResponder", "WKWebView"]
@@ -444,6 +474,7 @@ depends-member:
 - ["CSo11UIResponder", "loadView"]
 - !private ["CSo11UIResponder", "print"]
 - ["CSo11UIResponder", "urlForBuggyWKWebView"]
+- ["CSo11UIResponder", "userContentController"]
 - !private ["CSo11UIResponder", "view"]
 - ["CSo11UIResponder", "viewDidLoad"]
 - ["CSo11UIResponder", "webView"]
@@ -464,6 +495,7 @@ depends-member:
 - ["PSo16UIStateRestoring", "loadView"]
 - !private ["PSo16UIStateRestoring", "print"]
 - ["PSo16UIStateRestoring", "urlForBuggyWKWebView"]
+- ["PSo16UIStateRestoring", "userContentController"]
 - !private ["PSo16UIStateRestoring", "view"]
 - ["PSo16UIStateRestoring", "viewDidLoad"]
 - ["PSo16UIStateRestoring", "webView"]
@@ -487,6 +519,7 @@ depends-member:
 - ["PSo18UITraitEnvironment", "loadView"]
 - !private ["PSo18UITraitEnvironment", "print"]
 - ["PSo18UITraitEnvironment", "urlForBuggyWKWebView"]
+- ["PSo18UITraitEnvironment", "userContentController"]
 - !private ["PSo18UITraitEnvironment", "view"]
 - ["PSo18UITraitEnvironment", "viewDidLoad"]
 - ["PSo18UITraitEnvironment", "webView"]
@@ -501,7 +534,8 @@ depends-member:
 - ["CSo16UIViewController", "String"]
 - ["CSo16UIViewController", "UIView"]
 - !private ["CSo16UIViewController", "UserDefault"]
-- !private ["CSo16UIViewController", "WKUserContentController"]
+- ["CSo16UIViewController", "WKScriptMessage"]
+- ["CSo16UIViewController", "WKUserContentController"]
 - !private ["CSo16UIViewController", "WKUserScript"]
 - !private ["CSo16UIViewController", "WKUserScriptInjectionTime"]
 - ["CSo16UIViewController", "WKWebView"]
@@ -513,6 +547,7 @@ depends-member:
 - ["CSo16UIViewController", "loadView"]
 - !private ["CSo16UIViewController", "print"]
 - ["CSo16UIViewController", "urlForBuggyWKWebView"]
+- ["CSo16UIViewController", "userContentController"]
 - !private ["CSo16UIViewController", "view"]
 - ["CSo16UIViewController", "viewDidLoad"]
 - ["CSo16UIViewController", "webView"]
@@ -531,7 +566,8 @@ depends-member:
 - ["C13WKWebViewTest14ViewController", "String"]
 - ["C13WKWebViewTest14ViewController", "UIView"]
 - !private ["C13WKWebViewTest14ViewController", "UserDefault"]
-- !private ["C13WKWebViewTest14ViewController", "WKUserContentController"]
+- ["C13WKWebViewTest14ViewController", "WKScriptMessage"]
+- ["C13WKWebViewTest14ViewController", "WKUserContentController"]
 - !private ["C13WKWebViewTest14ViewController", "WKUserScript"]
 - !private ["C13WKWebViewTest14ViewController", "WKUserScriptInjectionTime"]
 - ["C13WKWebViewTest14ViewController", "WKWebView"]
@@ -544,9 +580,31 @@ depends-member:
 - ["C13WKWebViewTest14ViewController", "loadView"]
 - !private ["C13WKWebViewTest14ViewController", "print"]
 - ["C13WKWebViewTest14ViewController", "urlForBuggyWKWebView"]
+- ["C13WKWebViewTest14ViewController", "userContentController"]
 - !private ["C13WKWebViewTest14ViewController", "view"]
 - ["C13WKWebViewTest14ViewController", "viewDidLoad"]
 - ["C13WKWebViewTest14ViewController", "webView"]
+- !private ["CSo15WKScriptMessage", "body"]
+- !private ["CSo15WKScriptMessage", "name"]
+- !private ["PSo22WKScriptMessageHandler", "NSFileManager"]
+- !private ["PSo22WKScriptMessageHandler", "NSTemporaryDirectory"]
+- !private ["PSo22WKScriptMessageHandler", "NSURL"]
+- !private ["PSo22WKScriptMessageHandler", "NSURLRequest"]
+- !private ["PSo22WKScriptMessageHandler", "UserDefault"]
+- !private ["PSo22WKScriptMessageHandler", "WKUserContentController"]
+- !private ["PSo22WKScriptMessageHandler", "WKUserScript"]
+- !private ["PSo22WKScriptMessageHandler", "WKUserScriptInjectionTime"]
+- !private ["PSo22WKScriptMessageHandler", "WKWebView"]
+- !private ["PSo22WKScriptMessageHandler", "WKWebViewConfiguration"]
+- !private ["PSo22WKScriptMessageHandler", "containerView"]
+- !private ["PSo22WKScriptMessageHandler", "kBundlePath"]
+- !private ["PSo22WKScriptMessageHandler", "print"]
+- !private ["PSo22WKScriptMessageHandler", "urlForBuggyWKWebView"]
+- ["PSo22WKScriptMessageHandler", "userContentController"]
+- !private ["PSo22WKScriptMessageHandler", "view"]
+- !private ["PSo22WKScriptMessageHandler", "webView"]
+- ["PSo22WKScriptMessageHandler", ""]
+- !private ["CSo23WKUserContentController", "addScriptMessageHandler"]
 - !private ["CSo23WKUserContentController", "addUserScript"]
 - !private ["CSo23WKUserContentController", "init"]
 - !private ["CSo12WKUserScript", "init"]
@@ -631,6 +689,8 @@ depends-nominal:
 - !private "Sc"
 - !private "PSs31UnicodeScalarLiteralConvertible"
 - "C13WKWebViewTest14ViewController"
+- !private "CSo15WKScriptMessage"
+- "PSo22WKScriptMessageHandler"
 - !private "CSo23WKUserContentController"
 - !private "CSo12WKUserScript"
 - !private "OSC25WKUserScriptInjectionTime"
@@ -657,4 +717,4 @@ depends-external:
 - "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/iphonesimulator/x86_64/CoreGraphics.swiftmodule"
 - "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/iphonesimulator/x86_64/CoreImage.swiftmodule"
 - "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/iphonesimulator/x86_64/WebKit.swiftmodule"
-interface-hash: "8b3e2392268cefa20f4f80116d8afe62"
+interface-hash: "900c828e1f55ea6b75f54969abe8f228"

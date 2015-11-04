@@ -1,10 +1,10 @@
 version: "Apple Swift version 2.0 (swiftlang-700.0.59 clang-700.0.72)"
 options: "dcc3fbdd88ace329000f9bb25188a6d7"
-build_time: [499943365, 418748000]
+build_time: [499945882, 957877000]
 inputs: 
-	"/Users/huxiaoyang/Desktop/MyWorkSpace/LearningSwift/WKWebViewTest/Constants.swift": [499854818, 0]
-	"/Users/huxiaoyang/Desktop/MyWorkSpace/LearningSwift/WKWebViewTest/WKWebViewTest/TableViewController.swift": [499837315, 0]
-	"/Users/huxiaoyang/Desktop/MyWorkSpace/LearningSwift/WKWebViewTest/WKWebViewTest/JSTestViewController.swift": [499750738, 0]
-	"/Users/huxiaoyang/Desktop/MyWorkSpace/LearningSwift/WKWebViewTest/WKWebViewTest/ViewController.swift": !private [499943365, 0]
-	"/Users/huxiaoyang/Desktop/MyWorkSpace/LearningSwift/WKWebViewTest/WKWebViewTest/AppDelegate.swift": [499743171, 0]
+	"/Users/huxiaoyang/Desktop/MyWorkSpace/LearningSwift/WKWebViewTest/WKWebViewTest/ViewController.swift": [499945882, 0]
 	"/Users/huxiaoyang/Desktop/MyWorkSpace/LearningSwift/WKWebViewTest/WKWebViewTest/ShowTypeService.swift": [499836107, 0]
+	"/Users/huxiaoyang/Desktop/MyWorkSpace/LearningSwift/WKWebViewTest/Constants.swift": [499854818, 0]
+	"/Users/huxiaoyang/Desktop/MyWorkSpace/LearningSwift/WKWebViewTest/WKWebViewTest/AppDelegate.swift": [499743171, 0]
+	"/Users/huxiaoyang/Desktop/MyWorkSpace/LearningSwift/WKWebViewTest/WKWebViewTest/JSTestViewController.swift": [499750738, 0]
+	"/Users/huxiaoyang/Desktop/MyWorkSpace/LearningSwift/WKWebViewTest/WKWebViewTest/TableViewController.swift": [499837315, 0]

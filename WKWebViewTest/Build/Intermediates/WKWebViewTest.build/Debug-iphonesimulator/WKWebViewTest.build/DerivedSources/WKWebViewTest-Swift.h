@@ -88,6 +88,7 @@ typedef int swift_int4  __attribute__((__ext_vector_type__(4)));
 #if defined(__has_feature) && __has_feature(modules)
 @import UIKit;
 @import ObjectiveC;
+@import WebKit;
 #endif
 
 #pragma clang diagnostic ignored "-Wproperty-attribute-mismatch"
@@ -148,9 +149,11 @@ SWIFT_CLASS("_TtC13WKWebViewTest19TableViewController")
 @end
 
 @class NSURL;
+@class WKUserContentController;
+@class WKScriptMessage;
 
 SWIFT_CLASS("_TtC13WKWebViewTest14ViewController")
-@interface ViewController : UIViewController
+@interface ViewController : UIViewController <WKScriptMessageHandler>
 @property (nonatomic) IBOutlet UIView * __null_unspecified containerView;
 @property (nonatomic) WKWebView * __nullable webView;
 - (void)loadView;
@@ -158,6 +161,7 @@ SWIFT_CLASS("_TtC13WKWebViewTest14ViewController")
 /// <ul><li>将网页copy到NSTemporaryDirectory()下</li><li></li><li>@param String? <#String? description#></li><li></li><li>@return <#return value description#></li></ul>
 - (NSURL * __nullable)urlForBuggyWKWebView:(NSString * __nullable)filePath;
 - (void)viewDidLoad;
+- (void)userContentController:(WKUserContentController * __nonnull)userContentController didReceiveScriptMessage:(WKScriptMessage * __nonnull)message;
 - (void)didReceiveMemoryWarning;
 - (nonnull instancetype)initWithNibName:(NSString * __nullable)nibNameOrNil bundle:(NSBundle * __nullable)nibBundleOrNil OBJC_DESIGNATED_INITIALIZER;
 - (nullable instancetype)initWithCoder:(NSCoder * __nonnull)aDecoder OBJC_DESIGNATED_INITIALIZER;

@@ -10,7 +10,7 @@ import UIKit
 import WebKit
 
 
-class ViewController: UIViewController {
+class ViewController: UIViewController,WKScriptMessageHandler{
     
     @IBOutlet var containerView: UIView! = nil
     
@@ -68,7 +68,6 @@ class ViewController: UIViewController {
         let type = UserDefault.objectForKey("DispalyType")?.integerValue
         if type == 1{
             let url = NSURL(string: "https://www.baidu.com/")//http:www.baidu.com/无法显示网页
-            
             let req = NSURLRequest(URL: url!)
             self.webView!.loadRequest(req)
 
@@ -78,34 +77,43 @@ class ViewController: UIViewController {
             let userScript = WKUserScript(
                 source: "redHeader",
                 injectionTime: WKUserScriptInjectionTime.AtDocumentEnd,
-                forMainFrameOnly: true
+                forMainFrameOnly: false
             )
             contentController.addUserScript(userScript)
+            contentController.addScriptMessageHandler(self, name: "callbackHandler")
             
             let configure = WKWebViewConfiguration()
             configure.userContentController = contentController
             self.webView = WKWebView(frame: self.containerView.bounds, configuration: configure)
             self.view = self.webView
 
-//            加载本地页面
+            // 加载本地页面
             let filePath = kBundlePath("index", fileType: "html")
-            print("bundle:\(filePath)")
+//            print("bundle:\(filePath)")
             let url = urlForBuggyWKWebView(filePath)
             let request = NSURLRequest(URL: url!)
-            self.webView ?.loadRequest(request)
+            self.webView!.loadRequest(request)
             
         }
     }
     //注意！！！iOS9引入了新特性App Transport Security (ATS),新特性要求App内访问的网络必须使用HTTPS协议.如果出现网页无法显示的情况，需要修改项目的info.plist文件
     //1.在Info.plist中添加NSAppTransportSecurity类型Dictionary
     //2.在NSAppTransportSecurity下添加NSAllowsArbitraryLoads类型Boolean,值设为YES
+    
+    
+    
+    func userContentController(userContentController: WKUserContentController, didReceiveScriptMessage message: WKScriptMessage) {
+        if(message.name == "callbackHandler"){
+            print("Javascript is sending a message \(message.body)")
+        }
+    }
+    
 
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
         // Dispose of any resources that can be recreated.
     }
-    ///Users/huxiaoyang/Library/Developer/CoreSimulator/Devices/3C753B3C-48E5-4A5B-861F-EA325EF71094/data/Containers/Bundle/Application/9642D871-4B73-428F-97B6-8DE1E843413F/WKWebViewTest.app/index.html
-    ///Users/huxiaoyang/Library/Developer/CoreSimulator/Devices/3C753B3C-48E5-4A5B-861F-EA325EF71094/data/Containers/Data/Application/90B4B2C2-C0C3-4079-8CC8-E6DFB970EBB7/index.html
+
 
 }
 
