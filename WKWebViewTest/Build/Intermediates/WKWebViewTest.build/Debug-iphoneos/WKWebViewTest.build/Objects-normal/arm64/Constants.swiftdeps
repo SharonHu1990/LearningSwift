@@ -7,45 +7,45 @@ provides-top-level:
 - "kIs_iOS8"
 - "kRGBA"
 - "kAppPath"
-- "kFilePath"
+- "kBundlePath"
 - "kBundleDocumentPath"
 - "KCachesPath"
 provides-nominal:
 provides-member:
 provides-dynamic-lookup:
 depends-top-level:
-- !private "UnicodeScalarType"
-- !private "+"
-- !private "StringLiteralType"
-- "Bool"
+- "kBundlePath"
+- "kBundleDocumentPath"
+- "kAppPath"
+- "KCachesPath"
+- "kIs_iOS7"
+- !private "NSBundle"
+- "String"
 - !private "NSHomeDirectory"
+- !private "BooleanLiteralType"
+- "kIs_iOS8"
+- !private "/"
+- "kScreenWidth"
+- !private "NSSearchPathForDirectoriesInDomains"
+- "UIColor"
+- !private ">="
+- !private "UIDevice"
+- "UIScreen"
+- "Bool"
+- "kRGBA"
+- !private "NSString"
+- "kScreenHeight"
 - "CGFloat"
 - "NSUserDefaults"
-- "kRGBA"
-- !private "BooleanLiteralType"
-- !private "NSSearchPathForDirectoriesInDomains"
-- "kFilePath"
-- "kScreenHeight"
-- "kScreenWidth"
-- "UIColor"
-- "kAppPath"
-- !private "NSString"
-- !private "/"
-- !private "UIDevice"
-- "kIs_iOS8"
-- "String"
-- "kBundleDocumentPath"
-- !private ">="
-- "UIScreen"
 - "UserDefault"
-- "kIs_iOS7"
-- "KCachesPath"
 depends-member:
 - ["PSs9AnyObject", "bounds"]
 - !private ["PSs9AnyObject", "currentDevice"]
 - !private ["PSs9AnyObject", "doubleValue"]
 - !private ["PSs9AnyObject", "init"]
+- !private ["PSs9AnyObject", "mainBundle"]
 - ["PSs9AnyObject", "mainScreen"]
+- !private ["PSs9AnyObject", "pathForResource"]
 - ["PSs9AnyObject", "standardUserDefaults"]
 - !private ["PSs9AnyObject", "systemVersion"]
 - !private ["Sa", "Generator"]
@@ -75,7 +75,9 @@ depends-member:
 - !private ["PSs11CVarArgType", "currentDevice"]
 - !private ["PSs11CVarArgType", "doubleValue"]
 - !private ["PSs11CVarArgType", "init"]
+- !private ["PSs11CVarArgType", "mainBundle"]
 - ["PSs11CVarArgType", "mainScreen"]
+- !private ["PSs11CVarArgType", "pathForResource"]
 - ["PSs11CVarArgType", "standardUserDefaults"]
 - !private ["PSs11CVarArgType", "systemVersion"]
 - !private ["PSs14CollectionType", "Generator"]
@@ -101,7 +103,9 @@ depends-member:
 - !private ["PSs23CustomStringConvertible", "doubleValue"]
 - !private ["PSs23CustomStringConvertible", "first"]
 - !private ["PSs23CustomStringConvertible", "init"]
+- !private ["PSs23CustomStringConvertible", "mainBundle"]
 - ["PSs23CustomStringConvertible", "mainScreen"]
+- !private ["PSs23CustomStringConvertible", "pathForResource"]
 - ["PSs23CustomStringConvertible", "standardUserDefaults"]
 - !private ["PSs23CustomStringConvertible", "systemVersion"]
 - !private ["PSs9Equatable", "CachesDirectory"]
@@ -114,7 +118,9 @@ depends-member:
 - !private ["PSs9Equatable", "doubleValue"]
 - ["PSs9Equatable", "height"]
 - !private ["PSs9Equatable", "init"]
+- !private ["PSs9Equatable", "mainBundle"]
 - ["PSs9Equatable", "mainScreen"]
+- !private ["PSs9Equatable", "pathForResource"]
 - ["PSs9Equatable", "size"]
 - ["PSs9Equatable", "standardUserDefaults"]
 - !private ["PSs9Equatable", "systemVersion"]
@@ -131,7 +137,9 @@ depends-member:
 - !private ["PSs8Hashable", "currentDevice"]
 - !private ["PSs8Hashable", "doubleValue"]
 - !private ["PSs8Hashable", "init"]
+- !private ["PSs8Hashable", "mainBundle"]
 - ["PSs8Hashable", "mainScreen"]
+- !private ["PSs8Hashable", "pathForResource"]
 - ["PSs8Hashable", "standardUserDefaults"]
 - !private ["PSs8Hashable", "systemVersion"]
 - !private ["PSs9Indexable", "Generator"]
@@ -165,6 +173,8 @@ depends-member:
 - !private ["PSs16MutableSliceable", "SubSequence"]
 - !private ["PSs16MutableSliceable", "_Element"]
 - !private ["PSs16MutableSliceable", "first"]
+- !private ["CSo8NSBundle", "mainBundle"]
+- !private ["CSo8NSBundle", "pathForResource"]
 - !private ["PSo8NSCoding", "doubleValue"]
 - !private ["PSo8NSCoding", "init"]
 - !private ["PSo9NSCopying", "doubleValue"]
@@ -174,14 +184,18 @@ depends-member:
 - !private ["CSo8NSObject", "currentDevice"]
 - !private ["CSo8NSObject", "doubleValue"]
 - !private ["CSo8NSObject", "init"]
+- !private ["CSo8NSObject", "mainBundle"]
 - ["CSo8NSObject", "mainScreen"]
+- !private ["CSo8NSObject", "pathForResource"]
 - ["CSo8NSObject", "standardUserDefaults"]
 - !private ["CSo8NSObject", "systemVersion"]
 - ["PSo16NSObjectProtocol", "bounds"]
 - !private ["PSo16NSObjectProtocol", "currentDevice"]
 - !private ["PSo16NSObjectProtocol", "doubleValue"]
 - !private ["PSo16NSObjectProtocol", "init"]
+- !private ["PSo16NSObjectProtocol", "mainBundle"]
 - ["PSo16NSObjectProtocol", "mainScreen"]
+- !private ["PSo16NSObjectProtocol", "pathForResource"]
 - ["PSo16NSObjectProtocol", "standardUserDefaults"]
 - !private ["PSo16NSObjectProtocol", "systemVersion"]
 - !private ["OSC21NSSearchPathDirectory", "CachesDirectory"]
@@ -298,6 +312,7 @@ depends-nominal:
 - !private "PSs21MutableCollectionType"
 - !private "PSs16MutableIndexable"
 - !private "PSs16MutableSliceable"
+- !private "CSo8NSBundle"
 - !private "PSo8NSCoding"
 - !private "PSo9NSCopying"
 - !private "PSo16NSMutableCopying"
@@ -347,4 +362,4 @@ depends-external:
 - "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/iphoneos/arm64/CoreGraphics.swiftmodule"
 - "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/iphoneos/arm64/CoreImage.swiftmodule"
 - "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/iphoneos/arm64/WebKit.swiftmodule"
-interface-hash: "0405efe3e90cbe6cc83bd256d3c6d3c4"
+interface-hash: "426e380277a766e2d8de0410506750e4"

@@ -3,16 +3,14 @@
 <plist version="1.0">
 <dict>
 	<key>application-identifier</key>
-	<string>P7S95X9G2A.HXY.WKWebViewTest</string>
-	<key>aps-environment</key>
-	<string>development</string>
+	<string>PQGUW24Z79.HXY.WKWebViewTest</string>
 	<key>com.apple.developer.team-identifier</key>
-	<string>P7S95X9G2A</string>
+	<string>PQGUW24Z79</string>
 	<key>get-task-allow</key>
 	<true/>
 	<key>keychain-access-groups</key>
 	<array>
-		<string>P7S95X9G2A.HXY.WKWebViewTest</string>
+		<string>PQGUW24Z79.HXY.WKWebViewTest</string>
 	</array>
 </dict>
 </plist>

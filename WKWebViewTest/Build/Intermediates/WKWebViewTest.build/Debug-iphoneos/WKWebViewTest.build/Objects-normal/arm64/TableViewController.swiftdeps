@@ -6,24 +6,24 @@ provides-nominal:
 provides-member:
 - ["C13WKWebViewTest19TableViewController", ""]
 provides-dynamic-lookup:
-- "viewDidLoad"
-- "numberOfSectionsInTableView"
 - "didReceiveMemoryWarning"
-- "tableView"
-- "tableView"
-- "tableView"
+- "numberOfSectionsInTableView"
 - "sourceArr"
+- "viewDidLoad"
+- "tableView"
+- "tableView"
+- "tableView"
 depends-top-level:
-- "TableViewController"
-- "UITableViewController"
-- "StringLiteralType"
-- "NSIndexPath"
-- !private "+"
-- "UITableViewCell"
-- "Array"
-- "Int"
-- !private "UserDefault"
 - "UITableView"
+- "Array"
+- "TableViewController"
+- "Int"
+- "UITableViewCell"
+- "StringLiteralType"
+- !private "+"
+- "NSIndexPath"
+- "UITableViewController"
+- !private "UserDefault"
 depends-member:
 - !private ["PSs9AnyObject", "UserDefault"]
 - !private ["PSs9AnyObject", "dequeueReusableCellWithIdentifier"]
