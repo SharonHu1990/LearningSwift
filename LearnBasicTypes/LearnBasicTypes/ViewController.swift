@@ -22,7 +22,13 @@ class ViewController: UIViewController {
 
     //test
     
+<<<<<<< HEAD
     //test: dev_test
+=======
+    //dev_test2
+    
+    //test2
+>>>>>>> dev_test2
 
 }
 
